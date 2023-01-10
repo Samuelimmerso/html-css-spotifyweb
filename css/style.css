@@ -4,6 +4,7 @@
     --sidebar-width: 250px;
     --header-height: 80px;
     --footer-height: 80px;
+    --sidebar-icon: 10%;
 
 }
 
@@ -13,30 +14,167 @@
 }
 
 
+
+
 /* sidebar */
 .sidebar{
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: black;
     width: var(--sidebar-width);
+    padding: 1rem;
+    color: #A1A1A1;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* content */
+/* SIDEBAR TOP */
+.sidebar-top, .sidebar-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar .logo{
+    width: 70%;
+    align-self: flex-start;
+}
+
+.sidebar .navigation{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar .icon{
+    width: var(--sidebar-icon);
+    vertical-align: middle;
+}
+
+.sidebar span{
+    vertical-align: middle;
+}
+
+
+/* playlist */
+
+.playlist{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-playlist{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A1A1A1;
+    color: black;
+    font-weight: bolder;
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+}
+
+.playlist .list{
+    overflow: auto;
+}
+
+.playlist .list ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.playlist ul{
+    list-style: none;
+}
+
+.playlist > h4{
+    color: antiquewhite;
+}
+
+
+
+/* SIDEBAR BOTTOM */
+.sidebar-bottom{
+    gap: 10px;
+}
+
+/* install */
+.install-app{
+    padding-bottom: 15px;
+    border-bottom: 1px #A1A1A1 solid;
+}
+
+/* profile */
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile img{
+    background-color: #A1A1A1;
+    border-radius: 50%;
+    width: 30px;
+    padding: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTENT */
 .content{
-    background-color: aqua;
     width: calc(100% - var(--sidebar-width));
 }
 
 /*content header */
 header{
+    vertical-align: middle;
     background-color: rgba(0, 0, 0, 0.5);
     height: var(--header-height);
-    width: 100%;
+    width: calc(100% - var(--sidebar-width));
     position: fixed;
+    right: 0;
+}
+
+header button{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px white solid;
+    border-radius: 3rem;
+    padding: 10px 30px;
+    position: absolute;
+    right: 0;
+    vertical-align: middle;
 }
 
 /* content main */
 main{
-    background-color: aliceblue;
+    background-color: #141922;
     height: 100%;
     overflow: hidden;
 }
@@ -45,6 +183,6 @@ main{
 
 /* footer */
 footer{
-    background-color: blueviolet;
+    background-color: #282828;
     height: var(--footer-height);
 }

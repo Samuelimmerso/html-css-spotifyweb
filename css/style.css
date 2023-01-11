@@ -50,10 +50,11 @@ ul{
     justify-content: space-between;
     background-color: black;
     width: var(--sidebar-width);
+    height: 100vh;
     padding: 1rem;
+    padding-bottom: var(--footer-height);
     color: #A1A1A1;
     font-size: 14px;
-
 }
 
 /* SIDEBAR TOP */
@@ -199,12 +200,14 @@ header button{
 /* content main */
 main{
     background-color: #141922;
-    height: 100%;
-    overflow: auto;
     color: #A1A1A1;
     padding: var(--footer-height) 1rem;
     font-size: 14px;
+    height: 100vh;
+    overflow: auto;
 }
+
+
 
 main h2{
     color: white;
@@ -236,4 +239,6 @@ footer{
     background-color: #282828;
     height: var(--footer-height);
     position: fixed;
-}
+    bottom: 0;
+    width: 100%; 
+} 

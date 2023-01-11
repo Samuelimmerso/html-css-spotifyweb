@@ -17,6 +17,29 @@ ul{
     min-height: calc(100vh - var(--footer-height));
 }
 
+.row{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.card img{
+    /* debug */
+    width: calc(100%);
+}
+
+.card, .card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.card{
+    margin-right: 1.5rem;
+}
+
 
 
 
@@ -199,24 +222,12 @@ nav.main-navigation ul{
     gap: 20px;
 }
 
-.rec-played .row{
-    display: flex;
-    margin-top: 2rem;
+/* recommended */
+.recommended h2{
+    margin-bottom: .5rem;
 }
 
-.card img{
-    /* debug */
-    width: calc(100% - 1rem);
-    height: calc(100% - 1rem);
-    object-fit: cover;
-}
 
-.card{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-}
 
 
 
@@ -224,4 +235,5 @@ nav.main-navigation ul{
 footer{
     background-color: #282828;
     height: var(--footer-height);
+    position: fixed;
 }

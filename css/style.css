@@ -8,6 +8,10 @@
 
 }
 
+ul{
+    list-style: none;
+}
+
 .top-content{
     display: flex;
     min-height: calc(100vh - var(--footer-height));
@@ -25,7 +29,8 @@
     width: var(--sidebar-width);
     padding: 1rem;
     color: #A1A1A1;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
 }
 
 /* SIDEBAR TOP */
@@ -90,10 +95,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.playlist ul{
-    list-style: none;
 }
 
 .playlist > h4{
@@ -169,14 +170,52 @@ header button{
     padding: 10px 30px;
     position: absolute;
     right: 0;
-    vertical-align: middle;
+    top: 20%;
 }
 
 /* content main */
 main{
     background-color: #141922;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
+    color: #A1A1A1;
+    padding: var(--footer-height) 1rem;
+    font-size: 14px;
+}
+
+main h2{
+    color: white;
+}
+
+/* nav-bar */
+nav{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+nav.main-navigation ul{
+    display: flex;
+    gap: 20px;
+}
+
+.rec-played .row{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.card img{
+    /* debug */
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    object-fit: cover;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
 }
 
 
